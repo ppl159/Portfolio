@@ -32,13 +32,46 @@ header .menu_btn{
     width:2.5vw;
     margin:2.2vw;
 }
-nav{display:none;}
-
+nav{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    background-color:#212121;
+    padding-top:6vw;
+}
 nav ul li{
-    
+    display:none;
+    text-align:center;
+}
+nav ul li a{
+    color:#fff;
+    font-family:'TmoneyRoundWindRegular';
+    font-size:2.5vw;
+    padding:2vw 0;
+    position:relative;
+    white-space:nowrap; /*줄바꿈 못하게*/
+    display:inline-block; /*밑줄이 글씨길이 만큼만 나오게*/
+}
+nav ul li a:after{
+    content:"";
+    width:0;
+    height:4px;
+    position:absolute;
+    bottom:20px;
+    left:50%;
+    background-color:burlywood;
+    transition:all 0.5s;
+}
+nav ul li a:hover:after{
+    left:0;
+    width:100%;
 }
 nav .close{
-    
+    width:3vw;
+    position:absolute;
+    top:50px;
+    right:50px;
 }
 section{
     overflow:hidden;
@@ -52,7 +85,6 @@ section h1{
     text-align:center;
 }
 section.intro{
-    background-color:#fff0c8;
     background-image: linear-gradient(#d0d7ff,#fff0c8);
 }
 section.intro h1 {
@@ -260,13 +292,15 @@ section.profile{
     font-family: 'TmoneyRoundWindRegular';
 }
 section.profile .box{
-    width:100%;
+    width:90%;
     display:flex;
     justify-content:space-between;
     padding-top:7vw;
+    margin:0 auto;
 }
 section.profile .photo{
-    width:25%;
+    width:26%;
+    padding-top:1.5vw;
 }
 section .box .skill{
     width:24vw;
@@ -274,7 +308,7 @@ section .box .skill{
 }
 section.profile .skill h1{
     font-size:1.3vw;
-    line-height:3vw;
+    line-height:4vw;
     text-align:left; 
 }
 /*skill*/
@@ -285,7 +319,7 @@ section.profile .skill h1{
 	margin-bottom:15px;
 	width:100%;
 	background:#eee;
-	height:35px;
+	height:40px;
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
@@ -304,7 +338,7 @@ section.profile .skill h1{
 	position:absolute;
 	top:0;
 	left:0;
-width:110px;
+    width:110px;
 	font-weight:bold;
 	font-size:13px;
 	color:#ffffff;
@@ -321,8 +355,8 @@ width:110px;
 	display:block;
 	background:rgba(0, 0, 0, 0.1);
 	padding:0 20px;
-	height:35px;
-	line-height:35px;
+	height:40px;
+	line-height:40px;
 	-webkit-border-top-left-radius:3px;
 	-webkit-border-bottom-left-radius:3px;
 	-moz-border-radius-topleft:3px;
@@ -332,7 +366,7 @@ width:110px;
 }
 
 .skillbar-bar {
-	height:35px;
+	height:40px;
 	width:0px;
 	background:#6adcfa;
 	border-radius:3px;
@@ -344,11 +378,11 @@ width:110px;
 	position:absolute;
 	right:10px;
 	top:0;
-	font-size:11px;
-	height:35px;
-	line-height:35px;
+	font-size:12px;
+	height:40px;
+	line-height:40px;
 	color:#ffffff;
-	color:rgba(0, 0, 0, 0.4);
+	color:rgba(0, 0, 0, 0.5);
 }
 section.profile .work h3{
     font-size:1.3vw;
@@ -553,7 +587,236 @@ footer{
 
 
 
+@media screen and (max-width:1600px){
+    header{
+        width:100%;
+        height:150px;
+    }
+    header .logo{
+        width:7vw;
+        padding:0.2vw;
+    }
+    header .menu_btn{
+        width:4vw;
+        padding:0.8vw;
+    }
+    nav{
+        padding-top:9vw;
+    }
+    nav ul li a{
+    font-size:4vw;
+    }
+    section.intro h1 span{
+        font-size:150px;
+    }
+    section.intro h1 span:nth-child(18){
+        top:1vw;
+        font-size:3.5vw;
+    }
+    section.intro h1 span:nth-child(19){
+        top:1vw;
+        top:1vw;
+        font-size:3.5vw;
+    }
+    section.intro h1 span:nth-child(20){
+        top:1vw;
+        font-size:3.5vw;
 
+    }
+    section.intro h1 span:nth-child(21){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(22){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(23){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(24){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(25){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(26){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(27){
+        top:1vw;
+        font-size:3.5vw;
+
+    }
+    section.intro h1 span:nth-child(28){
+        top:1vw;
+        font-size:3.5vw;
+    }
+    section{
+        padding-top:8vw;
+    }
+    section h1{
+        font-size:3vw;
+    }
+    section .box .skill{
+        width:30vw;
+        padding:3vw 0;
+        box-sizing:border-box;
+    }
+    section.profile .skill h1{
+        font-size:1.7vw;
+        line-height:5vw;
+        text-align:left; 
+    }
+    .skillbar {
+        height:45px;
+        margin-bottom:25px;
+    }
+    .skillbar-title {
+        width:120px;
+        font-size:15px;
+    }
+    .skillbar-title span {
+        padding:0 20px;
+        height:45px;
+        line-height:42px;
+    }
+    .skillbar-bar {
+        height:45px;
+    }
+
+    .skill-bar-percent {
+        font-size:13px;
+        line-height:45px;
+    }
+    section.profile .photo{
+        width:30%;
+        padding-top:3.5vw;
+    }
+    section.profile .work h3{
+        font-size:1.7vw;
+        line-height:5vw;
+        padding-top:2vw;
+    }
+    section.profile .work ul li{
+        font-size:1.3vw;
+        line-height:2.5vw;
+    }
+    section.web{
+    background-color:#8993cc;
+    font-family: 'TmoneyRoundWindRegular';
+    }
+    section.web h2{
+        font-size:2vw;
+        margin-bottom:1vw;
+    }
+    section.web p{
+        font-size:1.3vw;
+        margin-bottom:1.7vw;
+    }
+    section.web b{
+        font-size:1.2vw;
+        line-height:3.5vw;
+        color:#35364a;
+    }
+    section.web span{
+        font-size:1.1vw;
+    }
+    section.web .swiper-slide{
+        height:35vw;
+        margin-top:15vw; 
+        box-sizing:border-box;
+    }
+    section.web .swiper-slide .swi_right{
+        padding-left:5vw;
+        box-sizing:border-box;
+        margin-top:-2vw;
+    }
+    section.web .swiper-slide .swi_left{
+        padding-left:5vw;
+        box-sizing:border-box;
+        margin-top:-2vw;
+    }
+    section.web .swiper-slide > div{
+        width:50%;
+    }
+    section.web .etc .color{
+        display:flex;
+        width:3vw;
+        margin-top:-3vw;
+        margin-left:2.3vw;
+    }
+    section.web .etc .color img{
+        margin-left:1vw;
+    }
+    section.web .swiper-slide > div .slide_btn{
+        margin-top:2vw;
+        display:flex;
+        justify-content:flex-start;
+    }
+    section.web .swiper-slide > div .slide_btn a{
+        border-radius:1vw;
+        background-color:#212121;
+        color:#fff;
+        padding:0.5vw 1vw;
+        font-size:1vw;
+    }
+    section.web .swiper-button-prev{
+        width:5vw;
+        left:-3vw;
+    }
+    section.web .swiper-button-next{
+        width:5vw;
+        right:-3vw;
+    }
+    section.editable .swiper-container .swiper-slide{
+        width:30%;
+        padding:11vw 0;
+    }
+    section.editable .swiper-container .swiper-slide p{
+        font-size:1.5vw;
+        text-shadow:3px 5px 5px #333;
+    }
+    section.contact .last{
+    width:90%;
+    height:85%;
+    margin:0 auto;
+    margin-top:5%;
+    background-color:#fff0c8;
+    box-sizing:border-box;
+    padding:3%;
+    }
+    section.contact .con_box div{
+        width:27vw;
+        margin:0 auto;
+        padding:10vw 0;
+    }
+    section.contact .con_box .con_right h2{
+        font-size:4vw;
+    }
+    section.contact .con_box .con_right span{
+        font-size:2vw;
+        line-height:4vw;
+    }
+    section.contact .con_box .con_right p{
+        font-size:1.5vw;
+        padding:2vw;
+        line-height:3vw;
+    }
+    footer{
+        padding-right:6%;
+    }
+    }
 
 
 
