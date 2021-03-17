@@ -22,35 +22,28 @@ jQuery(document).ready(function(){
            scrollTop:$(menu_attr).offset().top},1000);
         });
     
-    
-    
-    //스킬바
+   //스킬바
     $(window).scroll(function(){
-       //화면 맨위쪽 위치:0을 변수에 저장
-        var winTop=$(this).scrollTop();
+        //화면 맨위쪽 위치 : 0을 변수에 저장
+        var winTop=$(window).scrollTop();
         //화면 아래쪽 위치를 변수에 저장
         var winBottom=winTop+$(window).height();
-        //두번째 section의 시작 위치값을 변수에 저장
-        var secTop=$('.profile').offset().top;
         
-        if(secTop<winTop && secTop>winBottom){
-            
-        $('.skillbar').each(function(){
-		$(this).find('.skillbar-bar').animate({
-        width:$(this).attr('data-percent')
-		},1000);
-	});  
+        //두번째 section의 시작 위치값을 변수에 저장
+        var secTop=$('.profile').offset().top+500;
+        var secBottom=secTop+$('.profile').height()-700;
+        
+        //top < wBottom && bottom > wTop
+        if(secTop<winBottom && secBottom>winTop){
+            $('.skillbar').each(function(){
+		          $(this).find('.skillbar-bar').addClass('active');
+	        });
         }else{
-        $('.skillbar').each(function(){
-		$(this).find('.skillbar-bar').animate({
-        width:0
-		},1000);
-	});
+            $('.skillbar').each(function(){
+		          $(this).find('.skillbar-bar').removeClass('active');
+	        });
         }
     });
-    
-    
-    
     
     //swiper 슬라이드(web)
     var swiper = new Swiper('.swiper-container', {
@@ -66,7 +59,6 @@ jQuery(document).ready(function(){
     
     //swiper 슬라이드(editable)
     var swiper = new Swiper('.s1', {
-      
       autoplay: {
            delay: 5000,
          },

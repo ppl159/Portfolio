@@ -273,10 +273,11 @@ section.intro h1 span:nth-child(28) {
     font-family: 'TmoneyRoundWindRegular';
     -webkit-animation:none;
 }
-
-
-
-
+section.intro p{
+    text-align:center;
+    font-size:0.6vw;
+    padding-top:44vw;
+}
 
 /* ANIMATION */
 @-webkit-keyframes bounce {
@@ -372,6 +373,25 @@ section.profile .skill h1{
 	border-radius:3px;
 	-moz-border-radius:3px;
 	-webkit-border-radius:3px;
+    transition:width 0.5s;
+}
+.sk1.active{
+    width:80%;
+}
+.sk2.active{
+    width:80%;
+}
+.sk3.active{
+    width:70%;
+}
+.sk4.active{
+    width:70%;
+}
+.sk5.active{
+    width:50%;
+}
+.sk6.active{
+    width:50%;
 }
 
 .skill-bar-percent {
@@ -519,23 +539,24 @@ section.contact .con_box div{
 }
 section.contact .con_box .con_right{
     text-align:center;
-    margin-top:2vw;
-    margin-left:2vw;
+    margin-top:1.5vw;
+    margin-left:5vw;
 }
 section.contact .con_box .con_right h2{
-    font-size:3.5vw;
+    font-size:4vw;
 }
 section.contact .con_box .con_right span{
-    font-size:1.5vw;
+    font-size:1.8vw;
     line-height:3.5vw;
     font-weight:bold;
 }
 section.contact .con_box .con_right p{
-    font-size:1vw;
+    font-size:1.2vw;
     padding:2vw;
-    line-height:2vw;
+    line-height:2.5vw;
 }
 footer{
+    float:left;
     position:fixed;
     width:100%;
     height:50px;
